@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-29T12:06:04.606Z</updated>
+  <updated>2019-01-29T13:17:08.416Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo的使用技巧</title>
+    <link href="http://yoursite.com/wiki/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/wiki/hexo的使用技巧/</id>
+    <published>2019-01-29T13:10:45.000Z</published>
+    <updated>2019-01-29T13:17:08.416Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="首页展示折叠"><a href="#首页展示折叠" class="headerlink" title="首页展示折叠"></a>首页展示折叠</h2><p>在需要折叠的地方添加 <code></code></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p><a href="https://link.jianshu.com?t=https://hexo.io/zh-cn/docs/commands.html" rel="external nofollow noopener noreferrer" target="_blank">指令集</a></p><ul><li>hexo g = hexo generate  // 生成</li><li>hexo d = hexo deploy    // 部署</li><li>hexo s = hexo server    // 运行服务器</li><li>hexo new post “article title”    //新建文章</li></ul><h2 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h2><p>参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F" rel="external nofollow noopener noreferrer" target="_blank">设置侧边栏头像</a></p><h2 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h2><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是链接地址怎么写。对于hexo，有两种方式：</p><ol><li>使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</li><li>使用<em>微博图床</em>，地址<a href="https://link.jianshu.com?t=http://weibotuchuang.sinaapp.com/" rel="external nofollow noopener noreferrer" target="_blank">http://weibotuchuang.sinaapp.com/</a>，将图片拖入区域中，会生成图片的URL，这就是链接地址</li></ol><h2 id="分页设置"><a href="#分页设置" class="headerlink" title="分页设置"></a>分页设置</h2><p>在配置<code>站点配置文件</code>中添加:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  per_page: 5</span><br><span class="line"></span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 20</span><br><span class="line">  yearly: true</span><br><span class="line">  monthly: true</span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 10</span><br></pre></td></tr></table></figure><p>分别是主页、归档和标签的页数。如果部署失败就先执行 <code>$ npm i --save</code> ，参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/issues/30" rel="external nofollow noopener noreferrer" target="_blank">首页分页和归档分页不同是如何做到的</a></p><h2 id="新建自定义标签"><a href="#新建自定义标签" class="headerlink" title="新建自定义标签"></a>新建自定义标签</h2><p>在项目目录执行 <code>hexo new page ${PAGE_NAME}</code> ，在主题配置文件中增加以PAGE_NAME为名的menu，会在<code>${blog_path}\source\</code>文件夹下面生成对应<code>PAGE_NAME</code>名的文件夹，文件中有个<code>index.md</code>文件就是了，只要在写作的md文件头部加上<code>PAGE_NAME</code>就可以了，参考tag，categories…的创建，汉化：在 <code>languages/zh-Hans.yml</code> 文件的menu下面新增PAGE_NAME并汉化。</p><p>参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" rel="external nofollow noopener noreferrer" target="_blank">创建分类页面</a></p><h2 id="字体大小更改"><a href="#字体大小更改" class="headerlink" title="字体大小更改"></a>字体大小更改</h2><p>在<code>${Blog}\themes\next\source\css\_variables\custom.styl</code>文件里面添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$font-size-base           = 16px</span><br><span class="line">$code-font-size           = 14px</span><br></pre></td></tr></table></figure><p>参考：<a href="https://link.jianshu.com?t=http://theme-next.iissnan.com/faqs.html" rel="external nofollow noopener noreferrer" target="_blank">next-常见问题</a></p><p>修改代码字体大小后，在火狐浏览器上变得惨不忍睹（缩成一团），修改<code>${Blog}\themes\next\source\css\_variables\base.styl</code>文件下的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$line-height-code-block = 1.5</span><br></pre></td></tr></table></figure><p>原值是<code>1.6</code>。好多问题在next的issue下面都有讨论的。有可能是code字体每增大1，<code>line-height-code-block</code>的值减小0.1，未验证.</p><h2 id="生成默认带有categories的模板"><a href="#生成默认带有categories的模板" class="headerlink" title="生成默认带有categories的模板"></a>生成默认带有categories的模板</h2><p>使用<code>hexo new ${post_title}</code>生成模板时通常只有<code>title</code>,<code>date</code>,<code>tags</code>三个标签，想要加标签的话就在<code>${blog_path}\scaffolds\post.md</code>文件中添加一个标签就可以了。</p><h2 id="菜单栏排序"><a href="#菜单栏排序" class="headerlink" title="菜单栏排序"></a>菜单栏排序</h2><p>在<code>主题配置文件</code>中找到<code>menu</code>配置块，调整顺序即可。</p><h2 id="侧边栏默认显示与否配置"><a href="#侧边栏默认显示与否配置" class="headerlink" title="侧边栏默认显示与否配置"></a>侧边栏默认显示与否配置</h2><p>在<code>主题配置文件</code>中，找到<code>sidebar</code>块，配置<code>display</code>。</p><h2 id="网站图标设置"><a href="#网站图标设置" class="headerlink" title="网站图标设置"></a>网站图标设置</h2><p>在<code>主题配置文件</code>中配置<code>favicon</code>，配置为<code>favicon: /images/favicon.ico</code>，把图标文件<code>favicon.ico</code>放到<code>${blog}\images\</code>文件夹下即可。</p><h2 id="头像设置-1"><a href="#头像设置-1" class="headerlink" title="头像设置"></a>头像设置</h2><p>在<code>主题配置文件</code>中配置<code>avatar</code>为<code>avatar: /images/avatar3.jpg</code>或者一个链接的地址，然后在<code>主题</code>目录下的images文件夹下面放置头像jpg文件。</p><p>作者：BlackNeko</p><p>链接：<a href="https://www.jianshu.com/p/3c0e175c077f" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/3c0e175c077f</a></p><p>來源：简书</p><p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;首页展示折叠&quot;&gt;&lt;a href=&quot;#首页展示折叠&quot; class=&quot;headerlink&quot; title=&quot;首页展示折叠&quot;&gt;&lt;/a&gt;首页展示折叠&lt;/h2&gt;&lt;p&gt;在需要折叠的地方添加 &lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot;
+      
+    
+    </summary>
+    
+      <category term="wiki" scheme="http://yoursite.com/categories/wiki/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo最全教程</title>
@@ -87,28 +111,6 @@
     </summary>
     
       <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>张世春被诈骗案</title>
-    <link href="http://yoursite.com/wiki/%E5%BC%A0%E4%B8%96%E6%98%A5%E8%A2%AB%E8%AF%88%E9%AA%97%E6%A1%88/"/>
-    <id>http://yoursite.com/wiki/张世春被诈骗案/</id>
-    <published>2019-01-28T08:58:58.000Z</published>
-    <updated>2019-01-28T09:04:23.325Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一、线索来源"><a href="#一、线索来源" class="headerlink" title="一、线索来源"></a>一、线索来源</h3><ol><li><strong>案件编号</strong>：A3411020608002019010006</li><li><strong>立案单位</strong>：安徽省滁州市公安局琅琊分局</li><li><strong>简要案情</strong>：张世春（男，汉族，1970年3月8日出生，户籍地为：安徽滁州市南谯区全椒南路622号龙蟠南苑9幢1单元1204室，身份证号码：341102197003080835，电话：13335501005；微信号：wxid_1yu06eygoo9x22）报称：2018年下半年，其在家中加了一个微信好友（微信号：<code>zj_6767</code>,昵称：毛毛）对方称可以和其合伙购买大连华讯的业务服务，购买后对方就可以给其推荐优质股票；其信以为真后，在铜矿公司内用微信转账方式给其汇款购买。随后，又陆续加了几个投资人的微信及QQ并按对方的要求进行购买大连华讯推荐的股票、炒黄金。共计投资现金6.1万元。至报案无任何盈利发现被骗。对方投资人的微信号分别为：<code>hanxuncj</code>，昵称：福禄娃；<code>guhaihuishou</code>;昵称：王军）对方QQ号分别为：<code>3137862771</code>、<code>2562271983</code>、<code>2545410658</code>、<code>2545383696</code>；对方的账户：中行<code>6217582000039856463</code>，户名：李灿涛；<code>6212261709004526427</code>，户名：买琦；<code>6228485152036644615</code>，户名：王春梅；被骗账号：建行6217001720003618903；投资黄金的APP叫“MetaTrader4”.</li></ol><h3 id="二、串并案件"><a href="#二、串并案件" class="headerlink" title="二、串并案件"></a>二、串并案件</h3><ol><li>（<strong>案件编号</strong>）<strong>简要案情</strong>：2018年09月05日0时30分接廖春玲报案称：2018年8月15日至今，其在黄岩区东城街道华府天地8幢2单元101室被人在网上以投资黄金白金期货为由诈骗2万多元。<br> <strong>串案依据</strong>：银行卡号6217582000039856463</li></ol><h3 id="三、侦查研判过程"><a href="#三、侦查研判过程" class="headerlink" title="三、侦查研判过程"></a>三、侦查研判过程</h3><ol><li>微信号：zj_6767,昵称：毛毛 ，该账号无主体，2018年5月15有一笔资金进出。已查下级账号（未回）</li><li>微信号：hanxuncj，昵称：福禄娃，无主体信息。</li><li>微信号：guhaihuishou,自称王军，无主体信息。</li><li>QQ号：2545410658，自称王军，无主体信息</li><li>QQ号：1535594964，昵称：木槿花，无主体信息</li><li>QQ号：2545383696，自称朱经理，无主体信息</li><li>银行卡：6217582000039856463，主体李灿涛，身份证号440582199304022394，中国广东省深圳市福田区桑达大厦13D，联系电话：13113019613<ul><li>查询手机号13113019613，sis显示2014年为刘奕森使用，另支付宝实名该号主体也为刘奕森。</li><li>查询支付宝明细（未回）</li></ul></li><li>6212261709004526427，主体买琦，查询未回复。<ul><li><strong>该卡专门用来给受害人退钱</strong></li><li>通过对该卡流水分析发现该卡可能为多人使用，并通过VPN操作网银。2018年8月底9月初IP分别落在沈阳和广东，并且8月分该卡在沈阳“工行沈阳实物管理中心”有ATM取款记录。<br>*可能为专业取款、打款人 。</li></ul></li><li>6228485152036644615，王春梅，未与被害人发生直接联系。</li></ol><h3 id="四、研判结果"><a href="#四、研判结果" class="headerlink" title="四、研判结果"></a>四、研判结果</h3><ol><li><strong>犯罪嫌疑人情况</strong>：</li><li><strong>犯罪嫌疑人涉案依据</strong>：</li><li><strong>犯罪嫌疑人落地情况</strong>：</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;一、线索来源&quot;&gt;&lt;a href=&quot;#一、线索来源&quot; class=&quot;headerlink&quot; title=&quot;一、线索来源&quot;&gt;&lt;/a&gt;一、线索来源&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;案件编号&lt;/strong&gt;：A3411020608002019010006&lt;/l
-      
-    
-    </summary>
     
     
   </entry>
