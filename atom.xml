@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-29T13:17:08.416Z</updated>
+  <updated>2019-01-30T03:11:00.004Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,102 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo的使用技巧</title>
-    <link href="http://yoursite.com/wiki/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://yoursite.com/wiki/hexo的使用技巧/</id>
-    <published>2019-01-29T13:10:45.000Z</published>
-    <updated>2019-01-29T13:17:08.416Z</updated>
+    <title>fcitx浏览器中无法切换输入法</title>
+    <link href="http://yoursite.com/wiki/fcitx%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E6%97%A0%E6%B3%95%E5%88%87%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    <id>http://yoursite.com/wiki/fcitx浏览器中无法切换输入法/</id>
+    <published>2019-01-30T03:09:45.000Z</published>
+    <updated>2019-01-30T03:11:00.004Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="首页展示折叠"><a href="#首页展示折叠" class="headerlink" title="首页展示折叠"></a>首页展示折叠</h2><p>在需要折叠的地方添加 <code></code></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p><a href="https://link.jianshu.com?t=https://hexo.io/zh-cn/docs/commands.html" rel="external nofollow noopener noreferrer" target="_blank">指令集</a></p><ul><li>hexo g = hexo generate  // 生成</li><li>hexo d = hexo deploy    // 部署</li><li>hexo s = hexo server    // 运行服务器</li><li>hexo new post “article title”    //新建文章</li></ul><h2 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h2><p>参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F" rel="external nofollow noopener noreferrer" target="_blank">设置侧边栏头像</a></p><h2 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h2><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是链接地址怎么写。对于hexo，有两种方式：</p><ol><li>使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</li><li>使用<em>微博图床</em>，地址<a href="https://link.jianshu.com?t=http://weibotuchuang.sinaapp.com/" rel="external nofollow noopener noreferrer" target="_blank">http://weibotuchuang.sinaapp.com/</a>，将图片拖入区域中，会生成图片的URL，这就是链接地址</li></ol><h2 id="分页设置"><a href="#分页设置" class="headerlink" title="分页设置"></a>分页设置</h2><p>在配置<code>站点配置文件</code>中添加:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  per_page: 5</span><br><span class="line"></span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 20</span><br><span class="line">  yearly: true</span><br><span class="line">  monthly: true</span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 10</span><br></pre></td></tr></table></figure><p>分别是主页、归档和标签的页数。如果部署失败就先执行 <code>$ npm i --save</code> ，参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/issues/30" rel="external nofollow noopener noreferrer" target="_blank">首页分页和归档分页不同是如何做到的</a></p><h2 id="新建自定义标签"><a href="#新建自定义标签" class="headerlink" title="新建自定义标签"></a>新建自定义标签</h2><p>在项目目录执行 <code>hexo new page ${PAGE_NAME}</code> ，在主题配置文件中增加以PAGE_NAME为名的menu，会在<code>${blog_path}\source\</code>文件夹下面生成对应<code>PAGE_NAME</code>名的文件夹，文件中有个<code>index.md</code>文件就是了，只要在写作的md文件头部加上<code>PAGE_NAME</code>就可以了，参考tag，categories…的创建，汉化：在 <code>languages/zh-Hans.yml</code> 文件的menu下面新增PAGE_NAME并汉化。</p><p>参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" rel="external nofollow noopener noreferrer" target="_blank">创建分类页面</a></p><h2 id="字体大小更改"><a href="#字体大小更改" class="headerlink" title="字体大小更改"></a>字体大小更改</h2><p>在<code>${Blog}\themes\next\source\css\_variables\custom.styl</code>文件里面添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$font-size-base           = 16px</span><br><span class="line">$code-font-size           = 14px</span><br></pre></td></tr></table></figure><p>参考：<a href="https://link.jianshu.com?t=http://theme-next.iissnan.com/faqs.html" rel="external nofollow noopener noreferrer" target="_blank">next-常见问题</a></p><p>修改代码字体大小后，在火狐浏览器上变得惨不忍睹（缩成一团），修改<code>${Blog}\themes\next\source\css\_variables\base.styl</code>文件下的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$line-height-code-block = 1.5</span><br></pre></td></tr></table></figure><p>原值是<code>1.6</code>。好多问题在next的issue下面都有讨论的。有可能是code字体每增大1，<code>line-height-code-block</code>的值减小0.1，未验证.</p><h2 id="生成默认带有categories的模板"><a href="#生成默认带有categories的模板" class="headerlink" title="生成默认带有categories的模板"></a>生成默认带有categories的模板</h2><p>使用<code>hexo new ${post_title}</code>生成模板时通常只有<code>title</code>,<code>date</code>,<code>tags</code>三个标签，想要加标签的话就在<code>${blog_path}\scaffolds\post.md</code>文件中添加一个标签就可以了。</p><h2 id="菜单栏排序"><a href="#菜单栏排序" class="headerlink" title="菜单栏排序"></a>菜单栏排序</h2><p>在<code>主题配置文件</code>中找到<code>menu</code>配置块，调整顺序即可。</p><h2 id="侧边栏默认显示与否配置"><a href="#侧边栏默认显示与否配置" class="headerlink" title="侧边栏默认显示与否配置"></a>侧边栏默认显示与否配置</h2><p>在<code>主题配置文件</code>中，找到<code>sidebar</code>块，配置<code>display</code>。</p><h2 id="网站图标设置"><a href="#网站图标设置" class="headerlink" title="网站图标设置"></a>网站图标设置</h2><p>在<code>主题配置文件</code>中配置<code>favicon</code>，配置为<code>favicon: /images/favicon.ico</code>，把图标文件<code>favicon.ico</code>放到<code>${blog}\images\</code>文件夹下即可。</p><h2 id="头像设置-1"><a href="#头像设置-1" class="headerlink" title="头像设置"></a>头像设置</h2><p>在<code>主题配置文件</code>中配置<code>avatar</code>为<code>avatar: /images/avatar3.jpg</code>或者一个链接的地址，然后在<code>主题</code>目录下的images文件夹下面放置头像jpg文件。</p><p>作者：BlackNeko</p><p>链接：<a href="https://www.jianshu.com/p/3c0e175c077f" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/3c0e175c077f</a></p><p>來源：简书</p><p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~/.profile</span><br><span class="line">#fcitx</span><br><span class="line">export GTK_IM_MODULE=fcitx </span><br><span class="line">export QT_IM_MODULE=fcitx </span><br><span class="line">export XMODIFIERS=&quot;@im=fcitx&quot;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;首页展示折叠&quot;&gt;&lt;a href=&quot;#首页展示折叠&quot; class=&quot;headerlink&quot; title=&quot;首页展示折叠&quot;&gt;&lt;/a&gt;首页展示折叠&lt;/h2&gt;&lt;p&gt;在需要折叠的地方添加 &lt;code&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot;
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
       
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>增加yaourt的tmp空间</title>
+    <link href="http://yoursite.com/wiki/%E5%A2%9E%E5%8A%A0yaourt%E7%9A%84tmp%E7%A9%BA%E9%97%B4/"/>
+    <id>http://yoursite.com/wiki/增加yaourt的tmp空间/</id>
+    <published>2019-01-30T02:39:41.000Z</published>
+    <updated>2019-01-30T06:29:47.377Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="yaourt-介绍"><a href="#yaourt-介绍" class="headerlink" title="yaourt 介绍"></a>yaourt 介绍</h2><p>Yaourt (Yet An Other User Repository Tool)，是社区贡献的一个pacman的一个外壳。在pacman的基础上，它添加了AUR支持，帮助用户轻松从AUR的海量PKGBUILD中选择需要的软件进行编译安装。Yaourt的操作方式类似pacman，易于记忆使用。它提供诸如彩色输出、交互式搜索模式等一系列实用功能。 </p><a id="more"></a><h2 id="安装yaourt"><a href="#安装yaourt" class="headerlink" title="安装yaourt"></a>安装yaourt</h2><p>我们采用最简单的方法：<br>先用命令备份<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo cp /etc/pacman.conf /etc/pacman.conf.org</span><br></pre></td></tr></table></figure></p><p>再在pacman配置文件最后添加yaourt的源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$sudo nano /etc/pacman.conf </span><br><span class="line">#The Chinese Arch Linux communities packages. </span><br><span class="line">[archlinuxcn] </span><br><span class="line">SigLevel = Optional TrustAll </span><br><span class="line">Server   = http://repo.archlinuxcn.org/$arch</span><br></pre></td></tr></table></figure></p><p>或者添加官方源：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxfr] Server = http://repo.archlinux.fr/$arch</span><br></pre></td></tr></table></figure></p><p>保存退出后同步并安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo pacman -Syu yaourt</span><br></pre></td></tr></table></figure></p><h2 id="安装wps"><a href="#安装wps" class="headerlink" title="安装wps"></a>安装wps</h2><p>用命令安装$yaourt wps-office 因为这样安装的wps没有附带字体，因此启动wps后会提示安装字体。 </p><h2 id="tmp空间不够的解决"><a href="#tmp空间不够的解决" class="headerlink" title="tmp空间不够的解决"></a>tmp空间不够的解决</h2><p>如果没有问题的话，wps可以被很简单的安装好并可以使用了，但在我的1g内存的老机里老是因为空间不够无法完成安装。原因是yaourt用/tmp目录作为临时文件夹，而在只有/和/home两个分区的Archlinux系统中，/tmp被默认挂载成tmpfs格式，且默认只有内存的一半大小。也就是只有512M的/tmp目录对wps-office这样的软件编译安装就太小了。<br>解决方法有三种</p><h3 id="修改yaour临时目录"><a href="#修改yaour临时目录" class="headerlink" title="修改yaour临时目录"></a>修改yaour临时目录</h3><p>修改yaourt的临时目录（修改/etc/yaourtrc文件的“TMPDIR”变量）</p><h3 id="重新指定目录"><a href="#重新指定目录" class="headerlink" title="重新指定目录"></a>重新指定目录</h3><p>命令中指定tmp目录yaourt wps-office –tmp /var/tmp（可以是任意分区的任意目录，这样全部用硬盘的空间，速度会慢一点）</p><h3 id="使用swap增大虚拟内存"><a href="#使用swap增大虚拟内存" class="headerlink" title="使用swap增大虚拟内存"></a>使用swap增大虚拟内存</h3><p>临时调整swap分区以便/tmp可以用更大的内存。</p><ul><li><p>创建分区文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo dd if=/dev/zero of=/var/tmp/swap bs=1024 count=2000000</span><br></pre></td></tr></table></figure></li><li><p>格式化成交换分区</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo mkswap /var/tmp/swap</span><br></pre></td></tr></table></figure></li><li><p>挂载交换分区到系统文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo swapon /var/tmp/swap</span><br></pre></td></tr></table></figure></li><li><p>可以用命令swapon -s 或 free命令看看是否挂载成功。 </p></li><li><p>先清空/tmp目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo rm -rf /tmp</span><br></pre></td></tr></table></figure></li><li><p>增加/tmp空间</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo mount -t tmpfs -o size=1g tmpfs /tmp</span><br></pre></td></tr></table></figure></li><li><p>这是可以用df命令查看/tmp的空间已经变成了1g的容量了。 事情做完后我们不需要这个swap分区了，可以先卸载，再删除。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo swapoff /var/tmp/swap $sudo rm -rf /var/tmp/swap</span><br></pre></td></tr></table></figure><p>当然这个文件也可以保留，以后用的时候必须用swapon先挂载，因为一旦重启原先的挂载就会失效。如果要长期调整该分区可以修改/etc/fstab文件，在文件末尾加入 /var/tmp/swap swap swap defaults 0 0 </p></li></ul><h2 id="安装出错解决方法"><a href="#安装出错解决方法" class="headerlink" title="安装出错解决方法"></a>安装出错解决方法</h2><p>yaourt 之后，在出现“Edit PKGBUILD ? [Y/n] (“A” to abort)”<br>选择 y 之后</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp -r /tmp/yaourt-tmp-用户名/aur-wps-office/ ~/wps</span><br><span class="line">cd ~/wps</span><br><span class="line">makepkg</span><br><span class="line">yaourt -U /*.pkg./*</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;yaourt-介绍&quot;&gt;&lt;a href=&quot;#yaourt-介绍&quot; class=&quot;headerlink&quot; title=&quot;yaourt 介绍&quot;&gt;&lt;/a&gt;yaourt 介绍&lt;/h2&gt;&lt;p&gt;Yaourt (Yet An Other User Repository Tool)，是社区贡献的一个pacman的一个外壳。在pacman的基础上，它添加了AUR支持，帮助用户轻松从AUR的海量PKGBUILD中选择需要的软件进行编译安装。Yaourt的操作方式类似pacman，易于记忆使用。它提供诸如彩色输出、交互式搜索模式等一系列实用功能。 &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+      <category term="archlinux" scheme="http://yoursite.com/categories/linux/archlinux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>挂载ISO文件方法</title>
+    <link href="http://yoursite.com/wiki/%E6%8C%82%E8%BD%BDISO%E6%96%87%E4%BB%B6%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/wiki/挂载ISO文件方法/</id>
+    <published>2019-01-30T02:32:40.000Z</published>
+    <updated>2019-01-30T06:58:50.401Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="普通光盘文件："><a href="#普通光盘文件：" class="headerlink" title="普通光盘文件："></a>普通光盘文件：</h2><a id="more"></a><p>iso 格式的光盘镜像可以说是最普遍和通用的了，处理起来非常方便，挂载命令：<br>( 假设镜像文件名为 download，挂载点为 /mount-point ，下同)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t iso9660 -o loop,user download.iso  /mount-point</span><br></pre></td></tr></table></figure></p><h2 id="MDF文件："><a href="#MDF文件：" class="headerlink" title="MDF文件："></a>MDF文件：</h2><p>mdf 是 Win 下的虚拟光驱软件 Alcohol 120% 的专有格式，你可以用 mdf2iso 把 mdf  文件转换成 iso 格式再挂载，或者尝试用下面的命令挂载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount download.mdf /mount-point -o loop=/dev/loop0</span><br></pre></td></tr></table></figure></p><p>不过遗憾的是，有些分轨的 mdf 文件，这样还是无能为力。 BIN (or  BIN + CUE )： 可以用 cdemu 挂载，也可以用 bin2iso 转换成 iso 再挂载，也可以 bchunk 转换 bin+cue 到 iso 。 </p><h2 id="NRG："><a href="#NRG：" class="headerlink" title="NRG："></a>NRG：</h2><p>n rg 格式的镜像文件是 Nero 的专有格式，你可以用 nrg2iso 转换成 iso 再挂载，或者尝试下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -o loop,offset=307200 download.nrg /mount-point</span><br></pre></td></tr></table></figure></p><h2 id="CCD："><a href="#CCD：" class="headerlink" title="CCD："></a>CCD：</h2><p>ccd 是 CloneCD 的专有格式，你可以用 ccd2iso 转换成 iso 再挂载。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;普通光盘文件：&quot;&gt;&lt;a href=&quot;#普通光盘文件：&quot; class=&quot;headerlink&quot; title=&quot;普通光盘文件：&quot;&gt;&lt;/a&gt;普通光盘文件：&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>终端使用代理</title>
+    <link href="http://yoursite.com/wiki/%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86/"/>
+    <id>http://yoursite.com/wiki/终端使用代理/</id>
+    <published>2019-01-30T02:22:30.000Z</published>
+    <updated>2019-01-30T09:08:14.067Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>这是一种临时的手段，如果您仅仅是暂时需要通过http代理使用apt-get，您可以使用这种方式。 在使用apt-get之前，在终端中输入以下命令（根据您的实际情况替换yourproxyaddress和proxyport）。</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export http_proxy=http://yourproxyaddress:proxyport</span><br><span class="line">export http_proxy=http://username:passwd@yourproxyaddress:proxyport</span><br></pre></td></tr></table></figure><h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>这种方法要用到/etc/apt/文件夹下的apt.conf文件。如果您希望apt-get（而不是其他应用程序）一直使用http代理，您可以使用这种方式。 注意：某些情况下，系统安装过程中没有建立apt配置文件。下面的操作将视情况修改现有的配置文件或者新建配置文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/apt/apt.conf在您的apt.conf文件中加入下面这行（根据你的实际情况替换yourproxyaddress和proxyport）。 </span><br><span class="line">Acquire::http::Proxy &quot;http://yourproxyaddress:proxyport&quot;;</span><br></pre></td></tr></table></figure></p><p>保存apt.conf文件。</p><h2 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h2><p>这种方法会在您的主目录下的.bashrc文件中添加两行。如果您希望apt-get和其他应用程序如wget等都使用http代理，您可以使用这种方式。</p><p> gedit ~/.bashrc在您的.bashrc文件末尾添加如下内容（根据你的实际情况替换yourproxyaddress和proxyport）。 http_proxy=<a href="http://yourproxyaddress:proxyport" rel="external nofollow noopener noreferrer" target="_blank">http://yourproxyaddress:proxyport</a> export http_proxy保存文件。</p><p>关闭当前终端，然後打开另一个终端。 使用apt-get update或者任何您想用的网络工具测试代理。我使用firestarter查看活动的网络连接。 如果您为了纠正错误而再次修改了配置文件，记得关闭终端并重新打开，否自新的设置不会生效。 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;方法一：&quot;&gt;&lt;a href=&quot;#方法一：&quot; class=&quot;headerlink&quot; title=&quot;方法一：&quot;&gt;&lt;/a&gt;方法一：&lt;/h2&gt;&lt;p&gt;这是一种临时的手段，如果您仅仅是暂时需要通过http代理使用apt-get，您可以使用这种方式。 在使用apt-get之前，在终端中输入以下命令（根据您的实际情况替换yourproxyaddress和proxyport）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo的使用技巧</title>
+    <link href="http://yoursite.com/wiki/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/wiki/hexo的使用技巧/</id>
+    <published>2019-01-29T13:10:45.000Z</published>
+    <updated>2019-01-30T06:31:36.787Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="首页展示折叠"><a href="#首页展示折叠" class="headerlink" title="首页展示折叠"></a>首页展示折叠</h2><a id="more"></a><p>在需要折叠的地方添加  <!-- more --></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p><a href="https://link.jianshu.com?t=https://hexo.io/zh-cn/docs/commands.html" rel="external nofollow noopener noreferrer" target="_blank">指令集</a></p><ul><li>hexo g = hexo generate  // 生成</li><li>hexo d = hexo deploy    // 部署</li><li>hexo s = hexo server    // 运行服务器</li><li>hexo new post “article title”    //新建文章</li></ul><h2 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h2><p>参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F" rel="external nofollow noopener noreferrer" target="_blank">设置侧边栏头像</a></p><h2 id="文章中插入图片"><a href="#文章中插入图片" class="headerlink" title="文章中插入图片"></a>文章中插入图片</h2><p>使用markdown写文章，插入图片的格式为<code>![图片名称](链接地址)</code>，这里要说的是链接地址怎么写。对于hexo，有两种方式：</p><ol><li>使用本地路径：在<code>hexo/source</code>目录下新建一个<code>img</code>文件夹，将图片放入该文件夹下，插入图片时链接即为<code>/img/图片名称</code>。</li><li>使用<em>微博图床</em>，地址<a href="https://link.jianshu.com?t=http://weibotuchuang.sinaapp.com/" rel="external nofollow noopener noreferrer" target="_blank">http://weibotuchuang.sinaapp.com/</a>，将图片拖入区域中，会生成图片的URL，这就是链接地址</li></ol><h2 id="分页设置"><a href="#分页设置" class="headerlink" title="分页设置"></a>分页设置</h2><p>在配置<code>站点配置文件</code>中添加:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">index_generator:</span><br><span class="line">  per_page: 5</span><br><span class="line"></span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 20</span><br><span class="line">  yearly: true</span><br><span class="line">  monthly: true</span><br><span class="line"></span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 10</span><br></pre></td></tr></table></figure><p>分别是主页、归档和标签的页数。如果部署失败就先执行 <code>$ npm i --save</code> ，参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/issues/30" rel="external nofollow noopener noreferrer" target="_blank">首页分页和归档分页不同是如何做到的</a></p><h2 id="新建自定义标签"><a href="#新建自定义标签" class="headerlink" title="新建自定义标签"></a>新建自定义标签</h2><p>在项目目录执行 <code>hexo new page ${PAGE_NAME}</code> ，在主题配置文件中增加以PAGE_NAME为名的menu，会在<code>${blog_path}\source\</code>文件夹下面生成对应<code>PAGE_NAME</code>名的文件夹，文件中有个<code>index.md</code>文件就是了，只要在写作的md文件头部加上<code>PAGE_NAME</code>就可以了，参考tag，categories…的创建，汉化：在 <code>languages/zh-Hans.yml</code> 文件的menu下面新增PAGE_NAME并汉化。</p><p>参考：<a href="https://link.jianshu.com?t=https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" rel="external nofollow noopener noreferrer" target="_blank">创建分类页面</a></p><h2 id="字体大小更改"><a href="#字体大小更改" class="headerlink" title="字体大小更改"></a>字体大小更改</h2><p>在<code>${Blog}\themes\next\source\css\_variables\custom.styl</code>文件里面添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$font-size-base           = 16px</span><br><span class="line">$code-font-size           = 14px</span><br></pre></td></tr></table></figure><p>参考：<a href="https://link.jianshu.com?t=http://theme-next.iissnan.com/faqs.html" rel="external nofollow noopener noreferrer" target="_blank">next-常见问题</a></p><p>修改代码字体大小后，在火狐浏览器上变得惨不忍睹（缩成一团），修改<code>${Blog}\themes\next\source\css\_variables\base.styl</code>文件下的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$line-height-code-block = 1.5</span><br></pre></td></tr></table></figure><p>原值是<code>1.6</code>。好多问题在next的issue下面都有讨论的。有可能是code字体每增大1，<code>line-height-code-block</code>的值减小0.1，未验证.</p><h2 id="生成默认带有categories的模板"><a href="#生成默认带有categories的模板" class="headerlink" title="生成默认带有categories的模板"></a>生成默认带有categories的模板</h2><p>使用<code>hexo new ${post_title}</code>生成模板时通常只有<code>title</code>,<code>date</code>,<code>tags</code>三个标签，想要加标签的话就在<code>${blog_path}\scaffolds\post.md</code>文件中添加一个标签就可以了。</p><h2 id="菜单栏排序"><a href="#菜单栏排序" class="headerlink" title="菜单栏排序"></a>菜单栏排序</h2><p>在<code>主题配置文件</code>中找到<code>menu</code>配置块，调整顺序即可。</p><h2 id="侧边栏默认显示与否配置"><a href="#侧边栏默认显示与否配置" class="headerlink" title="侧边栏默认显示与否配置"></a>侧边栏默认显示与否配置</h2><p>在<code>主题配置文件</code>中，找到<code>sidebar</code>块，配置<code>display</code>。</p><h2 id="网站图标设置"><a href="#网站图标设置" class="headerlink" title="网站图标设置"></a>网站图标设置</h2><p>在<code>主题配置文件</code>中配置<code>favicon</code>，配置为<code>favicon: /images/favicon.ico</code>，把图标文件<code>favicon.ico</code>放到<code>${blog}\images\</code>文件夹下即可。</p><h2 id="头像设置-1"><a href="#头像设置-1" class="headerlink" title="头像设置"></a>头像设置</h2><p>在<code>主题配置文件</code>中配置<code>avatar</code>为<code>avatar: /images/avatar3.jpg</code>或者一个链接的地址，然后在<code>主题</code>目录下的images文件夹下面放置头像jpg文件。</p><p>作者：BlackNeko</p><p>链接：<a href="https://www.jianshu.com/p/3c0e175c077f" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/3c0e175c077f</a></p><p>來源：简书</p><p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;首页展示折叠&quot;&gt;&lt;a href=&quot;#首页展示折叠&quot; class=&quot;headerlink&quot; title=&quot;首页展示折叠&quot;&gt;&lt;/a&gt;首页展示折叠&lt;/h2&gt;
     
     </summary>
     
@@ -143,7 +224,7 @@
     <link href="http://yoursite.com/wiki/linux%E5%AE%89%E8%A3%85flashplayer/"/>
     <id>http://yoursite.com/wiki/linux安装flashplayer/</id>
     <published>2019-01-28T08:06:16.000Z</published>
-    <updated>2019-01-28T09:13:15.168Z</updated>
+    <updated>2019-01-30T06:35:54.711Z</updated>
     
     <content type="html"><![CDATA[<p>首先从adobe网站上下载linux版本的tar.gz压缩包。解压到Home下的个人目录。打开终端运行如下命令</p><p>1、Firefox<br>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.mozilla/plugins/</span><br><span class="line">cp ~/libflashplayer.so ~/.mozilla/plugins</span><br></pre></td></tr></table></figure></p><p>移除并还原到稳定版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~/.mozilla/plugins/libflashplayer.so</span><br></pre></td></tr></table></figure></p><p>2、Chrome (需要root权限)<br>备份及安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /opt/google/chrome/libgcflashplayer.so /opt/google/chrome/libgcflashplayer.so-backup</span><br><span class="line">sudo cp ~/libflashplayer.so /opt/google/chrome/libgcflashplayer.so</span><br></pre></td></tr></table></figure></p><p>移除并还原到稳定版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /opt/google/chrome/libgcflashplayer.so-backup /opt/google/chrome/libgcflashplayer.so</span><br></pre></td></tr></table></figure></p><p>另外，64位系统用户可以通过这个PPA来安装，支持Ubuntu 10.04 ~ 11.10 (source: wowubuntu.com)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:sevenmachines/flash</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install flashplugin64-installer</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -160,7 +241,11 @@
       <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
     
     
-      <category term="flash firefox chrome" scheme="http://yoursite.com/tags/flash-firefox-chrome/"/>
+      <category term="flash" scheme="http://yoursite.com/tags/flash/"/>
+    
+      <category term="firefox" scheme="http://yoursite.com/tags/firefox/"/>
+    
+      <category term="chrome" scheme="http://yoursite.com/tags/chrome/"/>
     
   </entry>
   

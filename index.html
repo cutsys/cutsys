@@ -169,9 +169,9 @@
                             &nbsp;
                             archlinux
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/archlinux安装记录/">archlinux安装记录</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/archlinux安装记录/">archlinux安装记录</a></li>  <li class="file"><a href="/wiki/增加yaourt的tmp空间/">增加yaourt的tmp空间</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/U盘挂载方法/">U盘挂载方法</a></li>  <li class="file"><a href="/wiki/linux安装flashplayer/">linux安装flashplayer</a></li>  <li class="file"><a href="/wiki/softlist/">softlist</a></li>  <li class="file"><a href="/wiki/文件及文件名编码转换/">文件及文件名编码转换</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/U盘挂载方法/">U盘挂载方法</a></li>  <li class="file"><a href="/wiki/fcitx浏览器中无法切换输入法/">fcitx浏览器中无法切换输入法</a></li>  <li class="file"><a href="/wiki/linux安装flashplayer/">linux安装flashplayer</a></li>  <li class="file"><a href="/wiki/softlist/">softlist</a></li>  <li class="file"><a href="/wiki/挂载ISO文件方法/">挂载ISO文件方法</a></li>  <li class="file"><a href="/wiki/文件及文件名编码转换/">文件及文件名编码转换</a></li>  <li class="file"><a href="/wiki/终端使用代理/">终端使用代理</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -272,6 +272,267 @@
 </aside>
             
             <section id="main">
+        <article id="post-fcitx浏览器中无法切换输入法" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/fcitx浏览器中无法切换输入法/">
+            <time datetime="2019-01-30T03:09:45.000Z" itemprop="datePublished">2019-01-30</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/fcitx浏览器中无法切换输入法/">fcitx浏览器中无法切换输入法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+        
+        
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~/.profile</span><br><span class="line">#fcitx</span><br><span class="line">export GTK_IM_MODULE=fcitx </span><br><span class="line">export QT_IM_MODULE=fcitx </span><br><span class="line">export XMODIFIERS=&quot;@im=fcitx&quot;</span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-增加yaourt的tmp空间" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/archlinux/">archlinux</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/增加yaourt的tmp空间/">
+            <time datetime="2019-01-30T02:39:41.000Z" itemprop="datePublished">2019-01-30</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/增加yaourt的tmp空间/">增加yaourt的tmp空间</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><h2 id="yaourt-介绍"><a href="#yaourt-介绍" class="headerlink" title="yaourt 介绍"></a>yaourt 介绍</h2><p>Yaourt (Yet An Other User Repository Tool)，是社区贡献的一个pacman的一个外壳。在pacman的基础上，它添加了AUR支持，帮助用户轻松从AUR的海量PKGBUILD中选择需要的软件进行编译安装。Yaourt的操作方式类似pacman，易于记忆使用。它提供诸如彩色输出、交互式搜索模式等一系列实用功能。 </p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/增加yaourt的tmp空间/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-挂载ISO文件方法" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/挂载ISO文件方法/">
+            <time datetime="2019-01-30T02:32:40.000Z" itemprop="datePublished">2019-01-30</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/挂载ISO文件方法/">挂载ISO文件方法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><h2 id="普通光盘文件："><a href="#普通光盘文件：" class="headerlink" title="普通光盘文件："></a>普通光盘文件：</h2><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/挂载ISO文件方法/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-终端使用代理" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/终端使用代理/">
+            <time datetime="2019-01-30T02:22:30.000Z" itemprop="datePublished">2019-01-30</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/终端使用代理/">终端使用代理</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>这是一种临时的手段，如果您仅仅是暂时需要通过http代理使用apt-get，您可以使用这种方式。 在使用apt-get之前，在终端中输入以下命令（根据您的实际情况替换yourproxyaddress和proxyport）。</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/终端使用代理/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-hexo的使用技巧" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -317,35 +578,11 @@
         
             
                 
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h2 id="首页展示折叠"><a href="#首页展示折叠" class="headerlink" title="首页展示折叠"></a>首页展示折叠</h2><p>在需要折叠的地方添加 <code></code></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p><a href="https://link.jianshu.com?t=https://hexo.io/zh-cn/docs/commands.html" rel="external nofollow noopener noreferrer" target="_blank">指令集</a></p>
-<ul>
-<li>hexo g = hexo generate  // 生成</li>
-<li>hexo d = hexo deploy    // 部署</li>
-<p>
-                
+                <p></p><h2 id="首页展示折叠"><a href="#首页展示折叠" class="headerlink" title="首页展示折叠"></a>首页展示折叠</h2><p></p>
             
         
         
-            </p></ul></div>   
+            </div>   
             <div class="article-more-link">
                 <a href="/wiki/hexo的使用技巧/#more">Read More</a>
             </div>
@@ -711,7 +948,7 @@
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/flash-firefox-chrome/">flash firefox chrome</a>
+        <a class="tag-link" href="/tags/chrome/">chrome</a>, <a class="tag-link" href="/tags/firefox/">firefox</a>, <a class="tag-link" href="/tags/flash/">flash</a>
     </div>
 
                         
@@ -789,253 +1026,9 @@
 
 
     
-        <article id="post-softlist" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/linux/">linux</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/softlist/">
-            <time datetime="2019-01-28T07:59:36.000Z" itemprop="datePublished">2019-01-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/softlist/">softlist</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-            
-        
-        
-            <p><strong>NetWork</strong><br>  chromium<br>  filezilla<br>  pidgin<br>  rdesktop(grdesktop)<br>  thunderbird<br>  transmission<br>  amule<br>  uget<br><strong>Office</strong><br>  fbreader<br>  foxit reader<br>  wps<br>  rednotebook<br>  freemind<br>  vym<br>  xmind<br>  mymind<br>  TiddlyMap<br><strong>Graphics</strong><br>  gimp<br>  gscreenshot<br>  ristretto<br>  gthumb<br><strong>Audio</strong><br>  audacious<br>  smplayer<br>  vlc<br>  xfburn<br>  volumeico<br>  volweel<br>  openshot<br><strong>Development</strong><br>  emacs<br>  bluefish<br>  eclipse-php<br><strong>System</strong><br>  gparted<br>  virtualbox<br>  terminator<br>  unetbootin<br>  screenfetch<br>  archey<br><strong>Utility</strong><br>  chmsee<br>  leafpad<br>  pacmanxg4<br>  sublime text<br>  file-roller<br>  Education<br>  GoldenDict<br>  notepadqq<br>  gedit</p>
-
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-archlinux安装记录" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/archlinux/">archlinux</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/archlinux安装记录/">
-            <time datetime="2019-01-28T06:40:30.000Z" itemprop="datePublished">2019-01-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/archlinux安装记录/">archlinux安装记录</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><p><strong>基础系统安装</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">dhcpcd</span><br><span class="line">passwd root</span><br><span class="line">rc.d start sshd</span><br><span class="line">cfdisk</span><br><span class="line">mkfs.ext2 /dev/sda1</span><br><span class="line">mkswap /dev/sda2 &amp;&amp; swapon /dev/sda2</span><br><span class="line">mkfs.ext4 /dev/sda3</span><br><span class="line">mkfs.ext4 /dev/sda4</span><br><span class="line">mount /dev/sda3 /mnt</span><br><span class="line">mkdir /mnt/boot &amp;&amp; mount /dev/sda1 /mnt/boot</span><br><span class="line">mkdir /mnt/boot/efi &amp;&amp; mount /dev/sda0 /mny/boot</span><br><span class="line">mkdir /mnt/home &amp;&amp; mount /dev/sda4 /mnt/home</span><br><span class="line">nano /etc/pacman.d/mirrorlist</span><br><span class="line">Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch</span><br><span class="line">Server = http://mirrors.163.com/archlinux/$repo/os/$arch</span><br><span class="line">pacstrap /mnt base base-devel</span><br><span class="line">pacstrap /mnt grub-bios</span><br><span class="line">genfstab -p /mnt &gt;&gt; /mnt/etc/fstab</span><br><span class="line">arch-chroot /mnt</span><br><span class="line">nano /etc/hostname</span><br><span class="line">ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line">nano /etc/locale.gen</span><br><span class="line">locale-gen</span><br><span class="line">echo LANG=zh_CN.UTF-8 &gt; /etc/locale.conf</span><br><span class="line">pacman -S efibootmgr</span><br><span class="line">grub-install /dev/sda</span><br><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br><span class="line">pacman -S net-tools</span><br><span class="line">pacman -S vim</span><br><span class="line">passwd</span><br><span class="line">exit</span><br><span class="line">umount /mnt</span><br><span class="line">umount /mnt/boot/</span><br><span class="line">umount /mnt/home/</span><br></pre></td></tr></table></figure>
-<p>图形界面安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/pacman.conf  </span><br><span class="line">加入 </span><br><span class="line">[archlinuxfr]</span><br><span class="line">SigLevel = Never</span><br><span class="line">Server = http://repo.archlinux.fr/$arch</span><br><span class="line">加入</span><br><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel = Optional TrustedOnly</span><br><span class="line">Server = http://repo.archlinuxcn.org/$arch</span><br></pre></td></tr></table></figure></p>
-<p>安装钥匙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yaourt -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br><span class="line">yaourt -Syy</span><br><span class="line">yaourt -Sf filesystem</span><br><span class="line">yaourt -Su</span><br><span class="line">useradd 用户名</span><br><span class="line">passwd 用户名</span><br><span class="line">usermod -G wheel,network,video,audio,optical,storage,power,dbus,hal 用户名</span><br><span class="line">mkdir /home/用户名</span><br><span class="line">chmod 777 /home/用户名</span><br><span class="line">chown 用户名 /home/用户名</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/wiki/archlinux安装记录/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/readme/">readme</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/readme/Quick-Start/">Quick Start</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/hello-world/">
-            <time datetime="2019-01-28T05:11:31.589Z" itemprop="datePublished">2019-01-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/hello-world/">Hello World</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/wiki/hello-world/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
+        <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+        </nav>
     
 </section>
         </div>
