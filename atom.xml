@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-30T03:11:00.004Z</updated>
+  <updated>2019-02-01T06:40:48.321Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sublime3安装插件及推荐</title>
+    <link href="http://yoursite.com/wiki/sublime3%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6%E5%8F%8A%E6%8E%A8%E8%8D%90/"/>
+    <id>http://yoursite.com/wiki/sublime3安装插件及推荐/</id>
+    <published>2019-02-01T06:31:15.000Z</published>
+    <updated>2019-02-01T06:40:48.321Z</updated>
+    
+    <content type="html"><![CDATA[<p>sublime text3下载安装成功后，还得安装相应的插件，才能更加方便快捷地写代码。</p><h2 id="安装Package-Control"><a href="#安装Package-Control" class="headerlink" title="安装Package Control"></a>安装Package Control</h2><p> Package Control为插件管理包，所以我们首先要安装它。有了它，我们就可以很方便的浏览、安装和卸载Sublime Text中的插件。</p><ol><li>打开Package Control的网页<a href="https://packagecontrol.io/，点击右侧的“Install" rel="external nofollow noopener noreferrer" target="_blank">https://packagecontrol.io/，点击右侧的“Install</a> Now”按钮。</li><li>进入<a href="https://packagecontrol.io/installation#st3页面，选择“SUBLIME" rel="external nofollow noopener noreferrer" target="_blank">https://packagecontrol.io/installation#st3页面，选择“SUBLIME</a> TEXT 3”选项卡，复制出里面的代码段：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">importurllib.request,os,hashlib; h = &apos;eb2297e1a458f27d836c04bb0cbaf282&apos; +&apos;d0e7a3098092775ccb37ca9d6b2e4b7d&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp= sublime.installed_packages_path(); urllib.request.install_opener(urllib.request.build_opener( urllib.request.ProxyHandler()) ); by =urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validatingdownload (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh !=h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</span><br></pre></td></tr></table></figure></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), &apos;wb&apos;).write(urllib.request.urlopen( &apos;http://sublime.wbond.net/&apos; + pf.replace(&apos; &apos;,&apos;%20&apos;)).read())</span><br></pre></td></tr></table></figure><ol start="3"><li>双击桌面“Sublime Text 3”打开程序，快捷键 Ctrl + ` 打开Sublime Text控制台，将之前复制的代码粘贴到控制台里，按下“Eenter”键。</li><li>等待其安装完成后关闭程序，重新启动“Sublime Text 3”，点开菜单“Preferences”可见“Package Control”项，说明插件管理包已安装成功。</li></ol><h2 id="插件安装方法："><a href="#插件安装方法：" class="headerlink" title="插件安装方法："></a>插件安装方法：</h2><h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p>按快捷键 Ctrl+Shift+p ，打开 “Command Palette” 悬浮对话框，在顶部输入 “install”, 然后下选点击 “Package Control:Install Package”。在出现的悬浮对话框中输入你所要的插件名称，然后点选下面的插件名称，就会自动开始安装。等一会就安装成功啦。点击菜单“Preferences”看见“Package Settings”项，就能看到你所安装的插件。</p><h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p>这个方法我现在不常用：首先下载完整的插件包后解压，放入…\Sublime Text3\Packages 目录下，就安装成功了。（每个人的存放路径不一样吧，我是放在C:\Program Files\Sublime Text 3\Packages下。）</p><h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><p>还可以用git 从插件的 GitHub 库直接克隆插件包到 Packages 目录下。插件地址：<a href="https://github.com/kairyou/SublimeTmpl" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/kairyou/SublimeTmpl</a></p><h2 id="插件推荐："><a href="#插件推荐：" class="headerlink" title="插件推荐："></a>插件推荐：</h2><ol><li>Emmet：Emmet是一个可以让你更快更高效地编写HTML和CSS，节省你大量时间的插件。只需按约定的缩写形式书写而不用写整个代码，然后按“扩展”键，这些缩写就会自动扩展为对应的代码内容。</li><li>ConvertToUTF8：ConvertToUTF8 能将除UTF8编码之外的其他编码文件在 Sublime Text 中转换成UTF8编码，在打开文件的时候一开始会显示乱码，一会儿自动显示出正常的字体。</li><li>Color Highlighter：我很喜欢这个插件。当你输入不同的颜色，就会在该位置显示对应的颜色，特别好看！</li><li>BracketHighlighter：这个插件会高亮显示匹配的括号、引号和标签。</li><li>ChineseLocalization：各国语言包</li><li>Alignment：代码对齐。</li><li>AutoFileName：帮助你快速地在文件中写路径，自动补全文件(目录)名。</li><li>CSS Format：它是css序列化插件，支持默认多种序列方案，还可以自己配置。</li><li>JsFormat：js序列化，能排在下载插件前25位。</li><li>DocBlockr：DocBlocker 是在Sublime平台上开发一款自动补全注释插件，支持JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Apex, Groovy, Objective C, C, C++ and Rust.等众多语言。</li><li>CTags：实现方法跳转。</li><li>SublimeTmpl：能快速生成文件模板。</li><li>SublimeCodeIntel：智能提示。</li><li>HTML/CSS/JS Prettify ：HTML、CSS、JS格式化。</li><li>LiveReload ：调试网页实时自动更新。</li><li>未完待续…</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;sublime text3下载安装成功后，还得安装相应的插件，才能更加方便快捷地写代码。&lt;/p&gt;
+&lt;h2 id=&quot;安装Package-Control&quot;&gt;&lt;a href=&quot;#安装Package-Control&quot; class=&quot;headerlink&quot; title=&quot;安装Pack
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+      <category term="IDE" scheme="http://yoursite.com/categories/linux/IDE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>archlinux安装kvm</title>
+    <link href="http://yoursite.com/wiki/archlinux%E5%AE%89%E8%A3%85kvm/"/>
+    <id>http://yoursite.com/wiki/archlinux安装kvm/</id>
+    <published>2019-01-31T04:19:22.000Z</published>
+    <updated>2019-01-31T04:26:23.189Z</updated>
+    
+    <content type="html"><![CDATA[<p>作者：散心阁<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/sanxinge/article/details/52347998" rel="external nofollow noopener noreferrer" target="_blank">https://blog.csdn.net/sanxinge/article/details/52347998</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;作者：散心阁&lt;br&gt;来源：CSDN&lt;br&gt;原文：&lt;a href=&quot;https://blog.csdn.net/sanxinge/article/details/52347998&quot; rel=&quot;external nofollow noopener noreferrer&quot; tar
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+      <category term="archlinux" scheme="http://yoursite.com/categories/linux/archlinux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>fcitx浏览器中无法切换输入法</title>
